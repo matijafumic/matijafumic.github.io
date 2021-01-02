@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>American Bar Dollar</title>
+  <link rel="icon" href="Images/Logo.png">
+
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="Scripts/script.js"></script>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <div id="loader">
+    <img src="Images/Loader.png">
+  </div>
+
+  <!-- <div id="formRadioButton">
+    <label><input type="radio" name="model" value="burger" checked> Burger</label>
+    <label><input type="radio" name="model" value="ribs"> Ribs</label>
+  </div> -->
+
+  <div id="buttons">
+    <span onclick="mySlide('prev');"><img class="arrows" src="Images/previous.png"></span>
+    <span onclick="mySlide('next');"><img class="arrows" src="Images/next.png"></span>
+  </div>
+
+  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; debugUIEnabled: false; patternRatio: 0.9;">
+    
+    <a-assets>
+      <a-asset-item id="Burger" src="Models/boorger.gltf"></a-asset-item>
+      <a-asset-item id="Ribs" src="Models/kbcrebro.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-light type="ambient" color="#ffffff"></a-light>
+    <a-light type="point" color="#ffffff" position="0 5 0"></a-light>
+    <a-light type="point" color="#ffffff" position="0 0 10"></a-light>
+
+    <a-marker id="showModel" type="pattern" url="Marker/Dollar.patt" smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
+      <a-entity id="Entity" gltf-model="#Burger" position="0 0 0" scale="0.05 0.05 0.05" rotation="0 90 0"></a-entity>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
