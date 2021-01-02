@@ -1,0 +1,32 @@
+body {
+    margin : 0px; 
+    overflow: hidden;
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ #loader img {
+    width: 60%;
+  }
+
+  #buttons {
+    position: absolute;
+    z-index: 9000;
+    left: 50%;
+  }
+
+  .arrows {
+    width: 5%;
+    height: 5%;
+  }
