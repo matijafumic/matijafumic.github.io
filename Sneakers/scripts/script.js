@@ -29,7 +29,6 @@ function init() {
     controller = renderer.xr.getController( 0 );
     controller.addEventListener( 'select', loadModel );
     scene.add( controller );
-    boxModel.addEventListener();
     window.addEventListener("resize", onWindowResize, false);
 }
 
@@ -58,7 +57,7 @@ function preloadModels(){
 
 function preloadBox(){
     const boxLoader = new GLTFLoader();
-    boxLoader.load( "../models/Box-Animated.gltf", function ( gltf ) {
+    boxLoader.load( "/Sneakers/models/Box-Animated.gltf", function ( gltf ) {
     boxModel = gltf.scene;
     boxModel.scale.set(0.03, 0.03, 0.03);
     boxModel.rotation.set(0, 0, 0);
@@ -74,7 +73,7 @@ function preloadBox(){
 function preloadShoes(){
     const shoesLoader = new GLTFLoader();
    
-    shoesLoader.load( "../models/shoeRed.gltf", function ( gltf ){
+    shoesLoader.load( "/Sneakers/models/shoeRed.gltf", function ( gltf ){
         shoeModelRed = gltf.scene;
         shoeModelRed.scale.set(0.7, 0.7, 0.7);
         shoeModelRed.rotation.set(0, 1.57079633, 0);
@@ -82,7 +81,7 @@ function preloadShoes(){
     console.error( error );
     } );
 
-    shoesLoader.load( "../models/shoeGreen.gltf", function ( gltf ) {
+    shoesLoader.load( "/Sneakers/models/shoeGreen.gltf", function ( gltf ) {
         shoeModelGreen = gltf.scene;
         shoeModelGreen.scale.set(0.7, 0.7, 0.7);
         shoeModelGreen.rotation.set(0, 1.57079633, 0);
@@ -90,7 +89,7 @@ function preloadShoes(){
     console.error( error );
     } );
 
-    shoesLoader.load( "../models/shoeBlue.gltf", function ( gltf ){
+    shoesLoader.load( "/Sneakers/models/shoeBlue.gltf", function ( gltf ){
         shoeModelBlue = gltf.scene;
         shoeModelBlue.scale.set(0.7, 0.7, 0.7);
         shoeModelBlue.rotation.set(0, 1.57079633, 0);
