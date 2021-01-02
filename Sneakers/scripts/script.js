@@ -1,6 +1,6 @@
-import * as THREE from './three.module.js';
-import { ARButton } from './ARButton.js';
-import { GLTFLoader } from './GLTFLoader.js';
+import * as THREE from 'three.module.js';
+import { ARButton } from 'ARButton.js';
+import { GLTFLoader } from 'GLTFLoader.js';
 
 var scene, camera, renderer, controller, mixer, clock;
 var boxModel, shoeModelRed, shoeModelGreen, shoeModelBlue, action, selectedShoe, modelLoaded = false;
