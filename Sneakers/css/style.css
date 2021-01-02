@@ -1,0 +1,47 @@
+canvas { 
+    display: block; 
+}
+
+body {
+	margin: 0px;
+	background-color: #C0C0C0;
+}
+
+input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+input:checked + img {
+	padding: 1px;
+}
+
+input:checked + #imageRed {
+	box-shadow: 0 0 2pt 1pt #ff0000;
+	border: #ff0000 solid 1px;
+	border-radius: 50%; 
+}
+
+input:checked + #imageGreen {
+	box-shadow: 0 0 2pt 1pt #00ff00;
+	border: #00ff00 solid 1px;
+	border-radius: 50%; 
+}
+
+input:checked + #imageBlue {
+	box-shadow: 0 0 2pt 1pt #0000ff;
+	border: #0000ff solid 1px;
+	border-radius: 50%; 
+}
+
+.imageRadio {
+	width: 20%;
+	height: 20%;
+}
+
+#chooseColor{
+	position: fixed;  
+	top: 40%; 
+	left: 20%;
+}
